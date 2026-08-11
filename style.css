@@ -1,15 +1,17 @@
 :root {
-  --cor-fundo: #14181f;
-  --cor-superficie: #1c222c;
-  --cor-superficie-alt: #232b38;
-  --cor-borda: #323b4a;
-  --cor-texto: #e9edf3;
-  --cor-texto-suave: #aab2c0;
-  --cor-destaque: #f2b84b;   /* dourado - ações principais */
-  --cor-destaque-2: #4fd1c5; /* verde-água - detalhes/gráfico */
+  --cor-fundo: #121212;
+  --cor-superficie: #1c1c1c;
+  --cor-superficie-alt: #262626;
+  --cor-borda: #3a3a3a;
 
-  --fonte-titulo: "Courier New", Courier, monospace;
-  --fonte-corpo: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --cor-texto: #f0ece4;
+  --cor-texto-suave: #b6afa4;
+
+  --cor-destaque: #b794f6;   
+  --cor-destaque-2: #8b5cf6; 
+
+  --fonte-titulo: "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+  --fonte-corpo: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
 
   --raio: 10px;
   --espaco-secao: 4.5rem;
@@ -104,7 +106,7 @@ code {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(20, 24, 31, 0.9);
+  background: rgba(18, 18, 18, 0.9);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--cor-borda);
 }
@@ -215,12 +217,12 @@ code {
 
 .btn-primary {
   background-color: var(--cor-destaque);
-  color: #1a1406;
+  color: #1f1030;
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background-color: #ffca63;
+  background-color: #d6bcfa;
 }
 
 .btn-secondary {
