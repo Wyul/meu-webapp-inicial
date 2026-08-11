@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Morin Werner · Currículo Interativo</title>
+  <meta name="description" content="Currículo interativo de Gabriel Morin Werner, formando em Ciência da Computação." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <p id="saudacao" class="saudacao" aria-live="polite"></p>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#midia">Mídia</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero container" id="topo">
+      <div class="hero-text">
+        <p class="eyebrow">// currículo interativo</p>
+        <h1>Olá, meu nome é Gabriel Morin Werner.</h1>
+        <p class="lead">
+          Estudante de Ciência da Computação, professor de informática e estudante do 8º
+          semestre, interessado nas áreas de T.I., programação e docência de crianças e 
+          adolescentes.
+        </p>
+
+        <div class="hero-actions">
+          <button id="btnSaudacao" class="btn btn-primary" type="button">
+            Diga olá 👋
+          </button>
+          <button id="btnToggleSobre" class="btn btn-secondary" type="button"
+                  aria-expanded="true" aria-controls="sobre">
+            Esconder seção "Sobre"
+          </button>
+        </div>
+
+        <p class="visitas">
+          Você é a visita número <strong id="contadorVisitas">0</strong> nesta
+          página (contador salvo no seu navegador).
+        </p>
+      </div>
+
+      <img
+        src="media/foto.png"
+        alt="Foto de Gabriel Morin Werner
+        class="hero-photo"
+        width="349"
+        height="460"
+      />
+    </section>
+
+    <section id="sobre" class="section container">
+      <article>
+        <h2>Sobre mim</h2>
+        <p>
+          Tenho 21 anos e estou cursando o último ano de Ciência da
+          Computação. Tenho cursos nas áreas de T.I. e atualmente atuo
+          como professor de informática para a Prefeitura de Maravilha.
+        </p>
+      </article>
+    </section>
+
+    <section id="habilidades" class="section container">
+      <h2>Habilidades</h2>
+
+      <div class="skills-layout">
+        <ul class="skills-list">
+          <li><span class="tag">HTML5</span> estruturação semântica de páginas</li>
+          <li><span class="tag">CSS</span> layout com Flexbox e responsividade</li>
+          <li><span class="tag">Javascript</span> interatividade básica no navegador</li>
+          <li><span class="tag">.NET básico</span> .NET básico para aplicações windows </li>
+          <li><span class="tag">Unity 3D</span> conhecimento da linguagem C#</li>
+          <li><span class="tag">Montagem de computadores</span> conhecimento em montagem e manutenção de computadores</li>
+          <li><span class="tag">Redes - básico</span> curso básico em manutenção e montagem de redes</li>
+          <li><span class="tag">Sistema Senior</span> conhecimento do sistema Senior (Gerador de Relatórios, Linguagem Senior de Programação e Estrutura de Banco de Dados Senior)</li>
+          <li><span class="tag">C, Java, Python</span> conhecimento das linguagens</li>
+          <li><span class="tag">Linux e Servidores</span> experiência com linux e servidores</li>
+          <li><span class="tag">Inglês Fluente</span> formado na Wizard</li>
+        </ul>
+
+        <div class="canvas-wrapper">
+          <canvas id="graficoHabilidades" width="350" height="220"
+                  role="img"
+                  aria-label="Gráfico de barras mostrando o nível de domínio em HTML, CSS, Javascript, Git e Figma">
+          </canvas>
+          <p class="canvas-caption">
+            Gráfico gerado com &lt;canvas&gt;: nível aproximado de domínio em
+            cada tecnologia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="midia" class="section container">
+      <h2>Mídia</h2>
+      <article>
+        <h3>Um pequeno áudio de apresentação</h3>
+        <p>
+          Abaixo está um breve trecho sonoro, incluído aqui para demonstrar o
+          uso da tag <code>&lt;audio&gt;</code> com controles acessíveis.
+        </p>
+        <audio controls preload="none">
+          <source src="media/apresentacao.wav" type="audio/wav" />
+          Seu navegador não suporta reprodução de áudio. Você pode
+          <a href="media/apresentacao.wav">baixar o arquivo de áudio</a> para ouvi-lo.
+        </audio>
+      </article>
+    </section>
+
+    <section id="contato" class="section container">
+      <h2>Fale comigo</h2>
+      <p>Digite seu nome abaixo — ele aparecerá como saudação no topo da página.</p>
+
+      <form id="formContato" class="form" novalidate>
+        <div class="form-field">
+          <label for="nomeVisitante">Seu nome</label>
+          <input
+            type="text"
+            id="nomeVisitante"
+            name="nomeVisitante"
+            placeholder="Ex: Maria"
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="emailVisitante">Seu e-mail</label>
+          <input
+            type="email"
+            id="emailVisitante"
+            name="emailVisitante"
+            placeholder="voce@exemplo.com"
+            autocomplete="email"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar saudação</button>
+        <p id="mensagemForm" class="mensagem-form" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="anoAtual"></span> Ana Souza. Feito com HTML, CSS e Javascript.</p>
+      <ul class="social-list">
+        <li>
+          <a href="mailto:gabrielmw2005@gmail.com" aria-label="Enviar e-mail para Ana Souza">
+            E-mail
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/gabriel-morin-werner/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Wyul/" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
